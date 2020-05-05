@@ -25,7 +25,7 @@ router.post('/get_weather', async function (req,res) {
       res.render('index', {weather: null, error: 'Error: Invalid API Key. Please see http://openweathermap.org/faq#error401 for more info.'});
     }
     else {
-      let unit_hex = (UNITS == 'imperial') ? '&#8457' : '&#8451';
+      let unit_hex = (UNITS == 'imperial') ? '&#0176F' : '&#0176C';
       res.render('index', {weather: weather, error: null, units: unit_hex});
     }
   }
